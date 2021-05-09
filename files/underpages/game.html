@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars | Game</title>
+
+    <link rel="stylesheet" href="../css/gameInit.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../img/icon.svg" type="image/svg">
+
+    <script src="../js/gameInit.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+<body id="body">
+    <header>
+        <img src="../img/icon.svg" alt="Icon">
+    </header>
+
+    <nav>
+        <div id="nav-button" onclick="displayMenu()">
+            <div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+            </div>
+        </div>
+        <div id="nav-menu">
+            <div id="nav-button-close" onclick="unDisplayMenu();">
+                <img src="../img/close.svg" alt="close icon" />
+            </div>
+            <div id="nav-links">
+                <div>
+                    <a href="../../index.html">Home</a>
+                    <div>
+                        <h3>Home</h3>
+                        <p>The start page of the Project</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="colonies.html">Colonies</a>
+                    <div>
+                        <h3>Colonies</h3>
+                        <p>How we're are gonna colonize Mars</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./newsletter.html">Newsletter</a>
+                    <div>
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our Newsletter about Mars</p>
+                    </div>
+                </div>
+                <div>
+                    <a id="active">Game</a>
+                    <div>
+                        <h3>Mars Game</h3>
+                        <p>Play as a mars rover and discover Mars for yourself</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                    <div>
+                        <h3>About</h3>
+                        <p>About this project and the developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="perfect-center fullvh">
+            <div>
+                <h1 id="gameHeader">Mars - Game</h1>
+                <div class="perfect-center">
+                    <form id="gameInput" autocomplete="off">
+                        <input type="text" id="nameInput" placeholder="Playername">
+                        <br>
+                        <div class="perfect-center">
+                            <button onclick="readGameInits();">Play</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="#top" id="Top-Button">
+        <img alt="Top Button" src ="../img/up.svg">
+    </a>
+</body>
+</html>

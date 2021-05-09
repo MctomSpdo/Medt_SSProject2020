@@ -1,0 +1,9 @@
+icon.svg: https://www.svgrepo.com/svg/275971/mars -> Edited with Illustrator
+mars00: https://www.nasa.gov/mission_pages/mars/images/index.html -> Viking 1 Composite Image of Mars -> Edited
+mars01: Nasa space obervatory -> Edited
+solar Systenm: https://freesvg.org/solar-system-with-planets
+Curiosity 3D: Nasa
+Perseverance 3D: Nasa
+Opportunity 3D: Nasa
+Satelite: Nasa -> Cut out manually
+ISS: Nasa

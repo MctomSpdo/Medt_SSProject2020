@@ -1,0 +1,498 @@
+/*************************** COLOR PALLETE *******************************************/
+
+:root {
+    --bannerBorder: #797979;
+    --background: #1d1d1d;
+    --backgroundDarker: #0f0f0f;
+    --textColor: #fff;
+    --navBackground: #fff;
+}
+/* https://www.w3schools.com/css/css3_variables.asp */
+
+html, body {
+    font-family: century-gothic, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--textColor);
+    scroll-behavior: smooth;
+    background: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: 30%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size:  1.2rem;
+}
+
+.noscroll {/* Dissallows Scrolling on the body Element */
+    overflow: hidden;
+    margin-right: 1.9vw;
+}
+
+a {
+    color: var(--textColor);
+}
+
+/*************************** HEADER ******************************************************/
+
+header {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+}
+
+header > img {
+    height: 7vh;
+    width: auto;
+}
+
+/*************************** NAV ******************************************************/
+nav {
+    position: absolute;
+    right: 0;
+}
+
+#nav-button {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    width: 8vh;
+    height: 8%;
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.5s;
+    transition: border-radius 0.2s;
+    z-index: 20;
+}
+
+#nav-button > div {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.nav-button-line {
+    width: 80%;
+    height: 1.5px;
+    background-color: var(--navBackground);
+    margin: 0 auto;
+    transition: background-color 0.5s;
+}
+
+#nav-button:hover {
+    border-color:rgba(255, 255, 255, 1);
+    border-radius: 100%;
+}
+
+#nav-button:hover .nav-button-line {
+    background-color:rgba(255, 255, 255, 0.7);
+}
+
+#nav-menu {
+    background-color: var(--navBackground);
+    height: 100vh;
+    width: 35vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    display: none;
+}
+
+#nav-button-close {
+    height: 8vh;
+    width: 8vh;
+    border: rgba(0, 0, 0, 0.6) solid 1px;
+    position: fixed;
+    top: 3vh;
+    right: 5vh;
+    border-radius: 2px;
+    z-index: 999991;
+    transition: border-color 0.5s;
+    transition: border-radius 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-button-close > img {
+    width: 65%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+#nav-button-close:hover {
+    border-radius: 100%;
+    border-color: #000;
+}
+
+#nav-button-close:hover > img {
+    transform: scale(1.4);
+}
+
+#nav-links {
+    position: relative;
+    top: 20vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+}
+
+#nav-links > div > a {
+    display: block;
+    margin: 1vh 2vh;
+    color: #000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+#nav-links > div > #active {
+    color: #777777;
+    cursor: pointer;
+}
+
+#nav-links > div > a:hover {
+    color: #5c5c5c;
+    text-decoration: underline;
+}
+
+#nav-links > div > div {
+    color: #fff;
+    position: absolute;
+    z-index: 300;
+    background-color: rgb(92, 92, 92, 0.9);
+    border: rgba(36, 36, 36, 0.4) solid 2px;
+    padding: 1vh 2vh;
+    padding-top: 0;
+    border-radius: 15px;
+    display: none;
+}
+
+/******************* MAIN *************************************************************/
+
+.fullscreen-box {
+    height: 100vh;
+    width: 100vw;
+}
+
+/********************* START BANNER ****************************************************/
+
+#start-banner {
+    height: 100vh;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#start-banner > div {
+    width: 100%;
+    display: grid;
+    align-items: flex-end;
+}
+
+#start-banner > div > img {
+    width: 100%;
+    height: auto;
+}
+
+#start-banner > div > div {
+    width: 100%;
+}
+
+#start-banner > div > div > h1 {
+    text-align: center;
+    font-size: 15rem;
+    letter-spacing: 1.5vw;
+    position: absolute;
+    bottom: 20vh;
+    width: 100%;
+}
+
+/* position: absolute -> Not possible due to some messed up z-index stuff that I don't understand */
+
+/************************ TOP BUTTON ****************************************************/
+
+#Top-Button {
+    position: fixed;
+    bottom: 2vh;
+    left: 2vh;
+    height: 5vh;
+    width: 5vh;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: border 1s;
+    transition: border-radius 0.2s;
+    display: none; /* to flex with js */
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+#Top-Button:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+#Top-Button > img {
+    width: 80%;
+    height: auto;
+}
+
+/****************************************** CONTENT *****************************************/
+
+.perfect-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgbox > img {
+    width: 100%;
+    height: auto;
+}
+
+.spaceholder5vh {
+    background-color: var(--background);
+    height: 5vh;
+}
+
+.whiteLine {
+    width: 80%;
+    height: 0;
+    border-top: solid 1px #fff;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: var(--background);
+    padding: 0 10%;
+    padding-bottom: 2vh;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    text-align: center;
+}
+
+.content > h1 {
+    margin: 0;
+    padding: 2vh 0;
+}
+
+.content-imgbox {
+    text-align: center;
+    width: 60%;
+    margin: 3vh auto 1vh auto;
+}
+
+.content-imgbox > div > img {
+    width: 100%;
+    height: auto;
+}
+
+.content-imgbox > div > div {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 5% 0;
+}
+
+.content-imgbox > div > div > p {
+    padding: 0;
+    margin: 0;
+}
+
+.grid-60-40 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+}
+
+.grid-40-60 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+}
+
+.grid-50-50-f {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+}
+
+.page-header {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header > div {
+    border: #fff 0.2vh solid;
+    padding: 2vh;
+    min-width: 25%;
+}
+
+/*********************************** BANNER IMGs *******************************/
+
+.banner-img {
+    height: 75vh;
+    display: flex;
+}
+
+.banner-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.banner-text {
+    width: 80%;
+    margin: 2vh auto;
+}
+
+.banner-text > h1{
+    text-align: center;
+}
+
+/*********************************** FOOTER ********************************/
+
+footer {
+    padding: 5vh 0;
+    background-color: var(--backgroundDarker);
+    width: 100%;
+}
+
+footer > div {
+    text-align: center;
+}
+
+.footerBottom {
+    margin: 2vh auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footerBottom p, .footerBottom a {
+    display: block;
+}
+
+/*********************************** RESPONSIVE *****************************************/
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .page-header > div{
+        width: 60%;
+    }
+
+    .page-header {
+        height: 50vh;
+    }
+
+    .content-imgbox {
+        width: 90%;
+    }
+
+    .phoneBottom {
+        grid-row: 2;
+    }
+
+    #start-banner > div > div > h1 {
+        font-size: 8rem;
+    }
+
+    .grid-60-40 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .grid-40-60 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .footerBottom {
+        width: 100%;
+    }
+
+    .banner-content {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .footerBottom {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-header > div{
+        width: 60%;
+    }
+    
+    .page-header {
+        height: 60vh;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header h3 {
+        font-size: 1rem;
+    }
+
+    .content-imgbox {
+        width: 100%;
+    }
+
+    .phoneBottom {
+        grid-row: 2;
+    }
+
+    #start-banner > div > div > h1 {
+        font-size: 5rem;
+    }
+
+    .grid-60-40 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .grid-40-60 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .banner-content {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #nav-menu {
+        width: 50vw;
+    }
+    
+    .footerBottom {
+        grid-template-columns: 100%;
+    }
+}

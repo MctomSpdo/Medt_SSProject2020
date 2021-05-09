@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://www.tutorialdocs.com/tutorial/swiper/get-started.html -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars | Colonies</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../img/icon.svg" type="image/svg">
+
+    <script src="../js/main.js" defer></script>
+
+    <!-- SWIPERJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src = "https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body id="body">
+    <header>
+        <img src="../img/icon.svg" alt="Icon">
+    </header>
+
+    <nav>
+        <div id="nav-button" onclick="displayMenu()">
+            <div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+                <div class="nav-button-line"></div>
+            </div>
+        </div>
+        <div id="nav-menu">
+            <div id="nav-button-close" onclick="unDisplayMenu();">
+                <img src="../img/close.svg" alt="close icon" />
+            </div>
+            <div id="nav-links">
+                <div>
+                    <a href="../../index.html">Home</a>
+                    <div>
+                        <h3>Home</h3>
+                        <p>The start page of the Project</p>
+                    </div>
+                </div>
+                <div>
+                    <a id="active">Colonies</a>
+                    <div>
+                        <h3>Colonies</h3>
+                        <p>How we're are gonna colonize Mars</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./newsletter.html">Newsletter</a>
+                    <div>
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our Newsletter about Mars</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./game.html">Game</a>
+                    <div>
+                        <h3>Mars Game</h3>
+                        <p>Play as a mars rover and discover Mars for yourself</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./about.html">About</a>
+                    <div>
+                        <h3>About</h3>
+                        <p>About this project and the developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div>
+                <h1>Colonizing Mars</h1>
+                <h3>A lot of companies and government agencies are both really interested in colonizig the red planet.
+                </h3>
+            </div>
+        </div>
+
+        <div class="spaceholder5vh"></div>
+        <div class="content">
+            <h1>How are we gonna colonize Mars?</h1>
+            <p>This is a good Question. The answer to that is more complicated tho.</p>
+            <p>Scientists, companies and government agencies like Nasa are all trying to work on different solutions
+                of how we are gonna live on mars. There are still some big problems like growing food. The ISS
+                (International Space Station) helps us to find solutions and experiment with a lot of materieals.
+            </p>
+            <p>But the Quesions how we are gonna do that, still remains open, and its only possible to guess, but no one
+                knows an exact answer</p>
+            <div class="content-imgbox">
+                <div>
+                    <img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                    ../img/iss/ISS_0.jpg 200w,
+                    ../img/iss/ISS_1.jpg 614w,
+                    ../img/iss/ISS_2.jpg 886w,
+                    ../img/iss/ISS_3.jpg 1104w,
+                    ../img/iss/ISS_4.jpg 1262w,
+                    ../img/iss/ISS_5.jpg 1332w,
+                    ../img/iss/ISS_6.jpg 1400w" src="../img/iss/ISS_6.jpg" alt="Iss">
+                    <div>
+                        <p>Image of the current ISS</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="spaceholder5vh"></div>
+
+        <div class="content">
+            <!-- Slider main container (https://swiperjs.com/swiper-api)-->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="spaceholder5vh"></div>
+
+        <div class="content">
+            <h1>When are we gonna do it?</h1>
+            <p>We first need to find solutions to a lot of problems that are gonna be caused by the Planet, and we have
+                to built a base there, since humans can't survive without an atmosphere.</p>
+        </div>
+
+        <div class="spaceholder5vh"></div>
+
+        <div class="content">
+            <h1>Dev</h1>
+            <p>Due to this Page still being in Development, this content ends here. Please come back later for more
+                content</p>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h1>Mars</h1>
+        </div>
+        <div class="footerBottom">
+            <div>
+                <h2>Information</h2>
+                <p>Medientechnik Sommersemeterprojekt 2021</p>
+                <p><a href="./about.html">About</a></p>
+                <p><a href="./sources.html">Sources</a></p>
+            </div>
+            <div>
+                <h2>Creator</h2>
+                <p>Created by: Thomas Spindler</p>
+                <p>School: <a href="http://htl-leonding.ac.at">HTL Leonding</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" id="Top-Button">
+        <img alt="Top Button" src="../img/up.svg">
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+html, body {
+    overflow: hidden;
+}
+
+.fullvh {
+    height: 100vh;
+}
+
+#gameHeader {
+    font-size: 10vh;
+    letter-spacing: 0.2vw;
+}
+
+.input {
+    color: #fff;
+    text-align: center;
+    font-size: 5vh;
+    height: 10vh;
+    background-color: transparent;
+    border: none 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    transition: border-bottom 0.5s;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+form > div > button {
+    font-size: 3vh;
+    height: 7vh;
+    width: 20%;
+    text-align: center;
+    margin: 3vh auto 0 auto;
+    background: transparent;
+    color: #fff;
+    border: solid 1.5px rgba(255, 255, 255, 0.4);
+    transition: border-color 0.5s;
+    transition: border-radius 0.5s;
+}
+
+form > div > button:hover {
+    border-color: #fff;
+    border-radius: 2vh;
+}
+
+.error {
+    text-align: center;
+    color: #ff0000;
+    display: none;
+}
