@@ -49,7 +49,7 @@ function curinit() {
 	const dirLight2 = new THREE.DirectionalLight(0xffffff);
 	dirLight2.position.set(-0.9, 0.7, 6);
 	dirLight2.intensity = 2;
-	curscene.add(dirLight2); 
+	curscene.add(dirLight2);
 
 	const dirLight3 = new THREE.DirectionalLight(0xffffff);	//light behind
 	dirLight3.position.set(0, 3, -5);
@@ -127,7 +127,7 @@ function opinit() {
 	opcamera = new THREE.PerspectiveCamera(60, opbox.offsetWidth / (window.innerHeight / height), 0.1, 1000);
 	opcamera.position.set(0.9, 1.5, -3);
 
-	oprenderer = new THREE.WebGLRenderer({alpha: true});
+	oprenderer = new THREE.WebGLRenderer({ alpha: true });
 	oprenderer.setSize(opbox.offsetWidth, window.innerHeight / height);
 	opbox.appendChild(oprenderer.domElement);
 
@@ -145,7 +145,7 @@ function opinit() {
 	const dirLight2 = new THREE.DirectionalLight(0xffffff);
 	dirLight2.position.set(-0.9, 0.7, 6);
 	dirLight2.intensity = 4;
-	opscene.add(dirLight2); 
+	opscene.add(dirLight2);
 
 	const dirLight3 = new THREE.DirectionalLight(0xffffff);	//light behind
 	dirLight3.position.set(0, 3, -5);
@@ -161,7 +161,7 @@ function opinit() {
 	opcontrols.minDistance = 1.5;
 	opcontrols.maxDistance = 5;
 	opcontrols.maxPolarAngle = Math.PI / 2.1;
-	
+
 	//load Opportunity Rover
 	const loader = new GLTFLoader();
 
@@ -180,7 +180,7 @@ function opinit() {
 
 		function (xhr) {
 			console.log("[INFO]: [GLTF Loader][Opp]: " + (xhr.loaded / xhr.total * 100) + '% loaded');
-		}, 
+		},
 		function (error) {
 			console.log('[ERROR]: [GLTF Loader][Opp]: An error happened');
 		}
@@ -217,7 +217,7 @@ function perinit() {
 	percamera = new THREE.PerspectiveCamera(60, perbox.offsetWidth / (window.innerHeight / height), 0.1, 1000);
 	percamera.position.set(-1, 1.8, 5);
 
-	perrenderer = new THREE.WebGLRenderer({alpha: true});
+	perrenderer = new THREE.WebGLRenderer({ alpha: true });
 	perrenderer.setSize(perbox.offsetWidth, window.innerHeight / height);
 	perbox.appendChild(perrenderer.domElement);
 
@@ -258,7 +258,7 @@ function perinit() {
 	loader.load(
 		'../3D/models/Perseverance.glb',
 
-		function(gltf) {
+		function (gltf) {
 			perscene.add(gltf.scene);
 			gltf.animations;
 			gltf.scene;
@@ -270,7 +270,7 @@ function perinit() {
 
 		function (xhr) {
 			console.log("[INFO]: [GLRF Loader][Per]: " + (xhr.loaded / xhr.total * 100) + '% loaded');
-		}, 
+		},
 
 		function (error) {
 			console.log('[ERROR]: [GLTF Loader][Per]: An error happened');
@@ -309,7 +309,7 @@ function satInit() {
 	satcamera = new THREE.PerspectiveCamera(60, satbox.offsetWidth / (window.innerHeight / height), 0.1, 1000);
 	satcamera.position.set(-0.9, 6, 11);
 
-	satrenderer = new THREE.WebGLRenderer({alpha: true});
+	satrenderer = new THREE.WebGLRenderer({ alpha: true });
 	satrenderer.setSize(satbox.offsetWidth, window.innerHeight / height);
 	satbox.appendChild(satrenderer.domElement);
 

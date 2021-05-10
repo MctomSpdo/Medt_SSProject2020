@@ -29,8 +29,8 @@ const loader = new GLTFLoader();
 
 // Optional: Provide a DRACOLoader instance to decode compressed mesh data
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath( './examples/js/libs/draco/' );
-loader.setDRACOLoader( dracoLoader );
+dracoLoader.setDecoderPath('./examples/js/libs/draco/');
+loader.setDRACOLoader(dracoLoader);
 
 loader.load(
 	'3D/models/Curiosity.glb',
@@ -44,15 +44,15 @@ loader.load(
 		gltf.asset
 	},
 
-	function ( xhr ) {
+	function (xhr) {
 
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+		console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 
 	},
 	// called when loading has errors
-	function ( error ) {
+	function (error) {
 
-		console.log( 'An error happened' );
+		console.log('An error happened');
 
 	}
 );

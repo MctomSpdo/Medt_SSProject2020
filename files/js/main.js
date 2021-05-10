@@ -1,15 +1,20 @@
-/*
-*   Mars        MainJS - Mars Project
-*   Author:     Thomas Spindler - HTL Leonding
-*   Comment:    Provides basic features of the Website. 
-*/
+/**************************************************************************************************
+ * MEDT - SSProject 2020
+ * Author: Martin Huemer, Thomas Spindler
+ * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
+ * HTL Leonding -> 2 BHTIM
+ * 
+ * Page: *
+ * Descripton: The Main JS Used on every page of the Project
+ **************************************************************************************************/
 
 let navMenu = document.getElementById("nav-menu");
 let body = document.getElementById("body");
 
-/********************************************* MENU ************************************/
-
-if(sessionStorage["menuOpen"] == "true") {
+/*
+ * MENU 
+ */
+if (sessionStorage["menuOpen"] == "true") {
     displayMenu();
 }
 
@@ -31,12 +36,12 @@ let menuButtons = document.getElementById("nav-links").children;
  * Add Hover events to the Nav to display the div below it
  */
 function initMenu() {
-    for(let i = 0; i < menuButtons.length; i++) {
+    for (let i = 0; i < menuButtons.length; i++) {
         menuButtons[i].addEventListener('mouseover', () => {
             let childs = menuButtons[i].children;
             childs[1].style.display = "block";
         });
-    
+
         menuButtons[i].addEventListener('mouseout', () => {
             let childs = menuButtons[i].children;
             childs[1].style.display = "none";
@@ -44,17 +49,19 @@ function initMenu() {
     }
 }
 initMenu();
-// https://wiki.selfhtml.org/wiki/JavaScript/DOM/Event/mouseover
+//https://wiki.selfhtml.org/wiki/JavaScript/DOM/Event/mouseover
 
-/********************************************************* TOP BUTTON **************************************************/
+/*
+ * TOP BUTTON 
+ */
 
 let topButton = document.getElementById("Top-Button");
 
 window.onscroll = () => {
-    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         topButton.style.display = "flex";
     } else {
         topButton.style.display = "none";
     }
 }
-// https://www.w3schools.com/howto/howto_css_modal_images.asp
+//https://www.w3schools.com/howto/howto_css_modal_images.asp
