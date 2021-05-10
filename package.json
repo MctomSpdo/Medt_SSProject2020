@@ -1,12 +1,12 @@
 {
-  "name": "03_entwicklung",
+  "name": "MEDT_SSPROJECT2020",
   "version": "1.0.0",
-  "description": "",
+  "description": "Medientechnik Sommersemeterprojekt 2020",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "MctomSpdo | Thomas Spindler",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"

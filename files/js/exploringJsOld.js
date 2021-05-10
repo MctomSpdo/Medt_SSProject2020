@@ -1,3 +1,16 @@
+/**************************************************************************************************
+ * MEDT - SSProject 2020
+ * Author: Thomas Spindler
+ * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
+ * HTL Leonding -> 2 BHTIM
+ * 
+ * Page: Exploring Mars
+ * Descripton: This is the OLD Version of the Exploring page, and is in NOT WORKING CONDITIONS!
+ * Libs: ThreeJS
+ * Tec used: WebGL
+ * OUTDATED!
+ **************************************************************************************************/
+
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/GLTFLoader.js';
 
 // THREE.JS Scene: 
