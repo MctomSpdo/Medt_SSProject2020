@@ -9,7 +9,8 @@
 }
 /* https://www.w3schools.com/css/css3_variables.asp */
 
-html, body {
+html,
+body {
     font-family: century-gothic, sans-serif;
     margin: 0;
     padding: 0;
@@ -27,10 +28,11 @@ h1 {
 }
 
 p {
-    font-size:  1.2rem;
+    font-size: 1.2rem;
 }
 
-.noscroll {/* Dissallows Scrolling on the body Element */
+.noscroll {
+    /* Dissallows Scrolling on the body Element */
     overflow: hidden;
     margin-right: 1.9vw;
 }
@@ -92,12 +94,12 @@ nav {
 }
 
 #nav-button:hover {
-    border-color:rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
     border-radius: 100%;
 }
 
 #nav-button:hover .nav-button-line {
-    background-color:rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #nav-menu {
@@ -253,6 +255,10 @@ nav {
 
 /****************************************** CONTENT *****************************************/
 
+.center {
+    text-align: center;
+}
+
 .perfect-center {
     display: flex;
     justify-content: center;
@@ -282,7 +288,12 @@ nav {
     padding-bottom: 2vh;
 }
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
     text-align: center;
 }
 
@@ -370,7 +381,7 @@ nav {
     margin: 2vh auto;
 }
 
-.banner-text > h1{
+.banner-text > h1 {
     text-align: center;
 }
 
@@ -393,14 +404,62 @@ footer > div {
     grid-template-columns: 50% 50%;
 }
 
-.footerBottom p, .footerBottom a {
+.footerBottom p,
+.footerBottom a {
     display: block;
 }
+
+/******************************************* INDEX ************************************/
+
+#weahterRepot-wrapper {
+    margin: 0 auto;
+}
+
+#weatherReport {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weatherReport > #weatherData {
+    box-sizing: border-box;
+    width: 23%;
+    margin: 1%;
+    padding: 1%;
+    background-color: rgba(29, 29, 29, 0.5);
+    border-radius: 5% 5%;
+}
+
+#weatherReport hr {
+    width: 80%;
+}
+
+/*********************************** LOADER ********************************/
+
+.loader {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #ffff;
+    border-radius: 100vh;
+    width: 10vh;
+    height: 10vh;
+    animation: spin 1s cubic-bezier(0.7, 0.1, 0.1, 0.7) infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*https://www.w3schools.com/howto/howto_css_loader.asp 
+  https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp*/
 
 /*********************************** RESPONSIVE *****************************************/
 
 @media (min-width: 600px) and (max-width: 800px) {
-    .page-header > div{
+    .page-header > div {
         width: 60%;
     }
 
@@ -442,13 +501,17 @@ footer > div {
     .footerBottom {
         grid-template-columns: 100%;
     }
+
+    #weatherReport > #weatherData {
+        width: 33%;
+    }
 }
 
 @media (max-width: 600px) {
-    .page-header > div{
+    .page-header > div {
         width: 60%;
     }
-    
+
     .page-header {
         height: 60vh;
     }
@@ -491,8 +554,32 @@ footer > div {
     #nav-menu {
         width: 50vw;
     }
-    
+
     .footerBottom {
         grid-template-columns: 100%;
+    }
+
+    #weatherReport > #weatherData {
+        width: 44%;
+        margin: 3%;
+    }
+}
+
+@media (max-width: 300px) {
+    #weatherReport > #weatherData {
+        width: 100%;
+        margin: 3%;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #nav-menu {
+        width: 75%;
     }
 }
