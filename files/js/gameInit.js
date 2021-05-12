@@ -13,20 +13,20 @@ let PlayernameInput = document.getElementById("nameInput");
 
 function readGameInits() {
     let playername = PlayernameInput.value;
+    console.log("lol");
 
-    if (playername == "" || playername.length < 5) {
-        alert("Playername must be at leat 5 characters long");
-        return;
+    if(playername == "" || playername.length < 5) {
+        alert("Playername must be at least 5 character long");
     }
 
-    sessionStorage["MGame_PlayerName"] = playername;
-    alert("Currently in Development!");
-
-    window.location.href = "./gamePlay.html";
+    sessionStorage["MarsGameName"] = playername;
+    console.log(playername);
+    window.location.href="./gamePlay.html";
 }
 
 PlayernameInput.addEventListener("keypress", function (event) {
     if (event.charCode == 13) {
+        event.preventDefault();
         readGameInits();
     }
 }, false);

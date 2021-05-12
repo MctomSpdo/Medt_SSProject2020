@@ -1,2 +1,0 @@
-WebGl: <script src="//cdn.webglstats.com" defer="defer" async="async"></script>
-WebGPU: ??
