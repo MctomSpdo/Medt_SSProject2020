@@ -1,3 +1,13 @@
+/**************************************************************************************************
+ * MEDT - SSProject 2020
+ * Author: Thomas Spindler
+ * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
+ * HTL Leonding -> 2 BHTIM
+ * 
+ * Page: Index.html
+ * Descripton: The Main JS Used on every page of the Project
+ **************************************************************************************************/
+
 let NasaKey = "Ard5P1Gocb3XeAbaaquOzvp2W1eWPDMPYTAHqV5D";//Nasa API Key (request under https://api.nasa.gov/.) (Uses: 1000 times / hour)
 let PersWeather = `https://mars.nasa.gov/rss/api/?feed=weather&category=mars2020&feedtype=json&api_key=${NasaKey}`;
 let season = document.getElementById("weather-season");

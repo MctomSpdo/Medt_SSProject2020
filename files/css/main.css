@@ -34,7 +34,6 @@ p {
 .noscroll {
     /* Dissallows Scrolling on the body Element */
     overflow: hidden;
-    margin-right: 1.9vw;
 }
 
 a {
