@@ -20,6 +20,7 @@ import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.127.0/examples/jsm/controls/OrbitControls.js";
 
 let height = 1.5;
+let ERRORMESSAGE = `<div class="perfect center"><h2>ERROR while Loading 3D Model</h2></div>`;
 /**
  * Curiosity Rover:
  */
@@ -73,6 +74,7 @@ function curinit() {
 		'../3D/models/Curiosity.glb',
 
 		function (gltf) {
+			opbox.children[0].remove();
 			curscene.add(gltf.scene);
 			gltf.animations; // Array<THREE.AnimationClip>
 			gltf.scene; // THREE.Group
@@ -89,9 +91,8 @@ function curinit() {
 		},
 		// called when loading has errors
 		function (error) {
-
 			console.log('[ERROR]: [GLTF Loader][Cur]: An error happened');
-
+			opbox.innerHTML = ERRORMESSAGE;
 		}
 	);
 
@@ -169,6 +170,7 @@ function opinit() {
 		'../3D/models/Opportunity.glb',
 
 		function (gltf) {
+			curbox.children[0].remove();
 			opscene.add(gltf.scene);
 			gltf.animations;
 			gltf.scene;
@@ -183,6 +185,7 @@ function opinit() {
 		},
 		function (error) {
 			console.log('[ERROR]: [GLTF Loader][Opp]: An error happened');
+			curbox.innerHTML = ERRORMESSAGE;
 		}
 	)
 
@@ -259,6 +262,7 @@ function perinit() {
 		'../3D/models/Perseverance.glb',
 
 		function (gltf) {
+			perbox.children[0].remove();
 			perscene.add(gltf.scene);
 			gltf.animations;
 			gltf.scene;
@@ -274,6 +278,7 @@ function perinit() {
 
 		function (error) {
 			console.log('[ERROR]: [GLTF Loader][Per]: An error happened');
+			perbox.innerHTML = ERRORMESSAGE
 		}
 	);
 
@@ -349,6 +354,7 @@ function satInit() {
 		'../3D/models/MRO.glb',
 
 		function (gltf) {
+			satbox.children[0].remove();
 			satscene.add(gltf.scene);
 			gltf.animations; // Array<THREE.AnimationClip>
 			gltf.scene; // THREE.Group
@@ -367,7 +373,7 @@ function satInit() {
 		function (error) {
 
 			console.log('[ERROR]: [GLTF Loader][Sat]: An error happened');
-
+			satbox.innerHTML = ERRORMESSAGE;
 		}
 	);
 
