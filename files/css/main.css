@@ -72,7 +72,7 @@ nav {
     align-items: center;
     transition: border-color 0.5s;
     transition: border-radius 0.2s;
-    z-index: 20;
+    z-index: 9999;
 }
 
 #nav-button > div {
@@ -110,6 +110,7 @@ nav {
     right: 0;
     z-index: 500;
     display: none;
+    z-index: 99999;
 }
 
 #nav-button-close {
@@ -240,6 +241,7 @@ nav {
     justify-content: center;
     align-items: center;
     border-radius: 2px;
+    z-index: 9999;
 }
 
 #Top-Button:hover {

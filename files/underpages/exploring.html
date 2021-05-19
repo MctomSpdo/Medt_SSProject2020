@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../img/icon.svg" type="image/svg">
 
+    <link rel="stylesheet" href="../css/imgLib.css">
+
     <script src="../js/main.js" defer></script>
 
     <!--3D JS-->
     <script type="module" src="../js/exploring.js" defer></script>
+    <!-- Img Libraby JS -->
+    <script src="../js/exploring2.js" defer></script>
 </head>
 
 <body id="body">
@@ -106,7 +110,7 @@
         <div class="content">
             <h1>Satelites</h1>
             <div class="grid-40-60">
-                <div>
+                <div class="perfect-center">
                     <div class="text-box">
                         <p>We are currently still using a lot of different satellites to explore Mars and collect data.
                             They orbit around the Planet, and collect data like images of the surface, weather data and
@@ -119,7 +123,9 @@
                 </div>
                 <div class="imgbox">
                     <div class="3D-wrapper" id="SateliteRender">
-                        <div class="perfect-center"><div class="loader"></div></div>
+                        <div class="perfect-center">
+                            <div class="loader"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,14 +136,20 @@
             <div class="grid-60-40">
                 <div class="imgbox phoneBottom">
                     <div class="3D-wrapper" id="CuriosityRender">
-                        <div class="perfect-center"><div class="loader"></div></div>
+                        <div class="perfect-center">
+                            <div class="loader"></div>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div class="perfect-center">
                         <div class="text-box">
-                            <p>Curiosity is one of the most popular Rovers from Nasa. It started its mission on August
-                                6, 2012. The Rover is still active to this day, as of May 6th, 2021. </p>
+                            <p>Curiosity is one of the most iconc rovers from Nasa. It started its mission on
+                                August
+                                6, 2012. The Rover is still active to this day, as of May 20th, 2021. It has survived
+                                over 3000 sols (Martian days) on our neighbour planet.</p>
+                            <p>Due to some problmes in a heating in the arm of Curiosity, it often has to enter a deep
+                                sleep mode to recharge it batteries, which decreses Efficiency.</p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +159,7 @@
         <div class="content">
             <h1>Opportunity</h1>
             <div class="grid-40-60">
-                <div>
+                <div class="perfect-center">
                     <div class="text-box">
                         <p>Opportunity started its operation in January 2004, and sent its last message on
                             June 10th, 2018. It operated for over 8 martian Years (15 Earth years). The last message was
@@ -164,7 +176,9 @@
                 </div>
                 <div class="imgbox">
                     <div class="3D-wrapper" id="OpportunityRender">
-                        <div class="perfect-center"><div class="loader"></div></div>
+                        <div class="perfect-center">
+                            <div class="loader"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,12 +187,14 @@
         <div class="content">
             <h1>Perseverance</h1>
             <div class="grid-60-40">
-                <div class="imgbox">
+                <div class="imgbox phoneBottom">
                     <div class="3D-wrapper" id="PerseveranceRender">
-                        <div class="perfect-center"><div class="loader"></div></div>
+                        <div class="perfect-center">
+                            <div class="loader"></div>
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div class="perfect-center">
                     <div class="text-box">
                         <p>Perseverance is the newst and currently only functioning Rover on Mars. It tries to find
                             remains
@@ -193,7 +209,71 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content libBox">
+            <h1>Images</h1>
+            <p>The Rovers provide Images from Mars nearly every single day. They can be found in the NASA database. The
+                can be also discovered here: </p>
+            <p>1. Select a Rover you want to get Images from</p>
+            <p></p>
+            <div id="input">
+                <form>
+                    <input type="text" id="solinput" placeholder="Input sol (default: 1)" value="1">
+                    <select name="rover" id="selectRover">
+                        <option value="perseverance">Perseverance</option>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="opportunity">Opportunity</option>
+                        <option value="spirit">Spirit</option>
+                    </select>
+                    <button id="inputbutton">get Images</button>
+                </form>
+            </div>
+            <div id="newestImg">
+                <div class="perfect-center">
+                    <div class="loader"></div>
+                </div>
+                <!-- EXAMPLE Generated:
+                    <div>
+                        <div>
+                            <img src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/00001/ids/edr/browse/fcam/FLR_0001_0667035458_958ECM_N0010052AUT_04096_00_2I3J01_1200.jpg"
+                                alt="Nasa Image" onclick="toFullScreen(this);">
+                            <div>
+                                <p>Rover: Perseverance</p>
+                                <p>camera: Front Hazard Avoidance Camera - Left</p>
+                                <p>Sol: 1</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/00001/ids/edr/browse/fcam/FLR_0001_0667035458_958ECM_N0010052AUT_04096_00_2I3J01_1200.jpg"
+                                alt="Nasa Image">
+                            <div>
+                                <p>Rover: Perseverance</p>
+                                <p>camera: Front Hazard Avoidance Camera - Left</p>
+                                <p>Sol: 1</p>
+                            </div>
+                        </div>
+        
+                    </div>-->
+            </div>
+            <div id="expand" onclick="expand();"><img src="../img/up.svg" alt="Expand"></div>
+            <div id="lib-fullscreen">
+                <div>
+                    <div class="perfect-center">
+                        <div id="FullscreenimageWrapper">
+                            <img src="" alt="Nasa Image" id="fullscreenImage">
+                        </div>
+
+                    </div>
+                    <div>
+                        <div id="fullscreenText">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="close">
+                    <img src="../img/close.svg" onclick="fullscreenDisplay(false)" alt="Close Button">
+                </div>
+            </div>
+            <div id="test"></div>
         </div>
     </main>
 

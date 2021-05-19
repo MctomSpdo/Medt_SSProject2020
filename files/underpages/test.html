@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars | TEST PAGE</title>
 
-    <link rel="stylesheet" href="../game/css/main.css">
     <link rel="shortcut icon" href="../img/icon.svg" type="image/svg">
+    <link rel="stylesheet" href="../css/main.css">
 
-    <script src="../js/test.js" defer></script>
+    <link rel="stylesheet" href="../css/imgLib.css">
+
+    <script src="../js/exploring2.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="content libBox">
+        <div id="input">
+            <form>
+                <input type="text" id="solinput" placeholder="Input sol (default: 1)" value="1">
+                <select name="rover" id="selectRover">
+                    <option value="perseverance">Perseverance</option>
+                    <option value="curiosity">Curiosity</option>
+                    <option value="opportunity">Opportunity</option>
+                    <option value="spirit">Spirit</option>
+                </select>
+                <button id="inputbutton">get Images</button>
+            </form>
+        </div>
+        <div id="newestImg">
+            <div class="perfect-center"><div class="loader"></div></div>
+            <!-- EXAMPLE Generated:
+            <div>
+                <div>
+                    <img src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/00001/ids/edr/browse/fcam/FLR_0001_0667035458_958ECM_N0010052AUT_04096_00_2I3J01_1200.jpg"
+                        alt="Nasa Image" onclick="toFullScreen(this);">
+                    <div>
+                        <p>Rover: Perseverance</p>
+                        <p>camera: Front Hazard Avoidance Camera - Left</p>
+                        <p>Sol: 1</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/00001/ids/edr/browse/fcam/FLR_0001_0667035458_958ECM_N0010052AUT_04096_00_2I3J01_1200.jpg"
+                        alt="Nasa Image">
+                    <div>
+                        <p>Rover: Perseverance</p>
+                        <p>camera: Front Hazard Avoidance Camera - Left</p>
+                        <p>Sol: 1</p>
+                    </div>
+                </div>
+
+            </div>-->
+        </div>
+        <div id="expand" onclick="expand();"><img src="../img/up.svg"></div>
+        <div id="lib-fullscreen">
+            <div>
+                <div class="perfect-center">
+                    <div id="FullscreenimageWrapper">
+                        <img src="" alt ="Nasa Image" id="fullscreenImage">
+                    </div>
+                    
+                </div>
+                <div> 
+                    <div id="fullscreenText">
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="close">
+                <img src="../img/close.svg" onclick="fullscreenDisplay(false)">
+            </div>
+        </div>
+        <div id="test"></div>
+    </div>
+
 </body>
+
 </html>
