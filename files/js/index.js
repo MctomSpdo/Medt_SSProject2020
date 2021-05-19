@@ -33,7 +33,7 @@ function getPersWeather() {
 
 function parsePersWeather(data) {
     let html = "";
-    for(let i = 0; i < data.sols.length; i++) {
+    for (let i = 0; i < data.sols.length; i++) {
         let current = data.sols[i];
         html += `<div id="weatherData">
                 <h2>Sol: ${current.sol}</h2>
@@ -48,12 +48,12 @@ function parsePersWeather(data) {
 }
 
 function convert(fahrenheit) {
-    if(degC) {
+    if (degC) {
         return Math.round(degFtoDegC(fahrenheit) * 10) / 10 + ' °C'; //rounded °C values
     }
     return fahrenheit + ' °F';
 }
 
-function degFtoDegC (fahrenheit) {
-    return (fahrenheit - 32) * 5/9;
+function degFtoDegC(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
 }

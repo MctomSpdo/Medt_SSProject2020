@@ -25,7 +25,7 @@ function init() {
 }
 
 function gameLoop() {
-    if(!PAUSED) {
+    if (!PAUSED) {
         loops++;
     }
     setTimeout(gameLoop, 100);
@@ -39,25 +39,25 @@ document.onkeydown = keyListenerDown;
 document.onkeyup = keyListenerUp;
 
 function keyListenerDown(e) {
-    if(!e) {
+    if (!e) {
         e = window.event; //Internet Explorer
     }
-    if(e.keyCode >= 0 && e.keyCode <= 120) {
+    if (e.keyCode >= 0 && e.keyCode <= 120) {
         keys[e.keyCode] = true;
     }
-    if(DEBUG && KEYLOG) {
+    if (DEBUG && KEYLOG) {
         console.log(`[INFO][KeyDown]: Key ${e.keyCode} Down`);
     }
 }
 
 function keyListenerUp(e) {
-    if(!e) {
+    if (!e) {
         e = window.event; //Internet Explorer
     }
-    if(e.keyCode >= 0 && e.keyCode <= 120) {
+    if (e.keyCode >= 0 && e.keyCode <= 120) {
         keys[e.keyCode] = false;
     }
-    if(DEBUG && KEYLOG) {
+    if (DEBUG && KEYLOG) {
         console.log(`[INFO][KeyUp]: Key ${e.keyCode} Up`);
     }
 }

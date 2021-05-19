@@ -4,7 +4,7 @@ class Item {
 
     constructor(name, amount) {
         this.name = name;
-        if(amount < 0 || amount > 64) {
+        if (amount < 0 || amount > 64) {
             console.error('[ERROR][ITEM]: Amount must been between 1 - 64');
             return;
         }

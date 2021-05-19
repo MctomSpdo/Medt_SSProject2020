@@ -15,13 +15,13 @@ function readGameInits() {
     let playername = PlayernameInput.value;
     console.log("lol");
 
-    if(playername == "" || playername.length < 5) {
+    if (playername == "" || playername.length < 5) {
         alert("Playername must be at least 5 character long");
     }
 
     sessionStorage["MarsGameName"] = playername;
     console.log(playername);
-    window.location.href="./gamePlay.html";
+    window.location.href = "./gamePlay.html";
 }
 
 PlayernameInput.addEventListener("keypress", function (event) {

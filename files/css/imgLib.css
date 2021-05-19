@@ -1,7 +1,3 @@
-.ibBox {
-
-}
-
 #newestImg {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -17,7 +13,7 @@
     grid-column-end: 4;
 }
 
-#newestImg > div > div{
+#newestImg > div > div {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -32,7 +28,7 @@
 
 #newestImg > div > div > div {
     position: absolute;
-    background-color: rgba(0, 0, 0. 0.4);
+    background-color: rgba(0, 0, 0 0.4);
     opacity: 0%;
 }
 
@@ -53,15 +49,12 @@
     transform: rotate(180deg);
 }
 
-#lib-fullscreen {
-
-}
-
 #input {
     text-align: center;
 }
 
-#solinput,  #selectRover{
+#solinput,
+#selectRover {
     color: #fff;
     text-align: center;
     font-size: 3vh;
@@ -86,7 +79,8 @@
     outline: none;
 }
 
-#solinput:focus, #selectRover:focus {
+#solinput:focus,
+#selectRover:focus {
     outline: none;
     border-bottom: 2px solid rgba(255, 255, 255, 1);
 }
@@ -124,7 +118,8 @@
     max-width: 90vw;
 }
 
-#lib-fullscreen > div, #lib-fullscreen > div > div {
+#lib-fullscreen > div,
+#lib-fullscreen > div > div {
     height: 100%;
     text-align: center;
 }

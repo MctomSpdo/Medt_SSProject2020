@@ -1,14 +1,28 @@
+/**************************************************************************************************
+ * MEDT - SSProject 2020
+ * Author: Thomas Spindler
+ * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
+ * HTL Leonding -> 2 BHTIM
+ * 
+ * Page: Exploring Mars
+ * Descripton: This Js embeds and loads the Images of the Mars rovers
+ * Tec used: Nasa Dev API
+ **************************************************************************************************/
+
 let NasaKey = "Ard5P1Gocb3XeAbaaquOzvp2W1eWPDMPYTAHqV5D";
 let dataF;
+
 let resultBox = document.getElementById("newestImg");
-let fullscreen = document.getElementById("lib-fullscreen");
 let expandButton = document.getElementById("expand");
+
 let inputsol = document.getElementById("solinput");
 let roverselect = document.getElementById("selectRover");
 let loadButton = document.getElementById("inputbutton");
+
 let fullscreenBox = document.getElementById("lib-fullscreen");
 let fullscreenImage = document.getElementById("fullscreenImage");
 let fullscreenText = document.getElementById("fullscreenText");
+
 let expanded = false;
 let numbercheck = new RegExp("^[0-9]+$");
 let currentsol = 1;
@@ -27,11 +41,11 @@ loadButton.addEventListener('click', () => {
 
 function dataInput(sol) {
     let solnumber = parseInt(sol);
-    if(solnumber < 0 || !numbercheck.test(sol)) {
+    if (solnumber < 0 || !numbercheck.test(sol)) {
         console.log("[INFO]: Invalid Sol input");
         return;
     }
-    if(solnumber == currentsol) {//reduce DataBase executeion (limit: 1000 / h)
+    if (solnumber == currentsol) {//reduce DataBase executeion (limit: 1000 / h)
         return;
     }
     loadData(sol, roverselect.value);
@@ -64,7 +78,7 @@ function generateImg(imgdata) {
                 <p>Earth Date: ${imgdata.earth_date}</p>
             </div>
         </div>`
-        return html;
+    return html;
 }
 
 function toFullScreen(element) {
@@ -75,29 +89,29 @@ function toFullScreen(element) {
 
 function generateLib(data) {
     let box1 = "<div>";
-    let box2 = "<div>"; 
+    let box2 = "<div>";
     let box3 = "<div>";
     let current = 1;
     let length = data.photos.length;
 
-    for(let i = 0; i < length; i++) {
-        if(current == 1) {
+    for (let i = 0; i < length; i++) {
+        if (current == 1) {
             box1 += generateImg(data.photos[i]);
         }
-        if(current == 2) {
+        if (current == 2) {
             box2 += generateImg(data.photos[i]);
         }
-        if(current == 3) {
+        if (current == 3) {
             box3 += generateImg(data.photos[i]);
         }
         current++;
-        if(current > 3) {
+        if (current > 3) {
             current = 1;
         }
     }
 
     box1 += "</div>";
-    box2 += "</div>"; 
+    box2 += "</div>";
     box3 += "</div>";
 
     resultBox.innerHTML = box1 + box2 + box3;
@@ -105,7 +119,7 @@ function generateLib(data) {
 }
 
 function expand() {
-    if(expanded) {
+    if (expanded) {
         resultBox.style.maxHeight = "80vh";
         expandButton.children[0].style.transform = "rotate(180deg)";
     } else {
@@ -114,11 +128,11 @@ function expand() {
     }
     expanded = !expanded;
     expandButton.children[0].style.transform = "";
-    
+
 }
 
 function fullscreenDisplay(on) {
-    if(!on) {
+    if (!on) {
         fullscreenBox.style.display = "none";
     } else {
         fullscreenBox.style.display = "grid"
