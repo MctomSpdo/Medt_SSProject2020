@@ -12,6 +12,8 @@
 let NasaKey = "Ard5P1Gocb3XeAbaaquOzvp2W1eWPDMPYTAHqV5D";
 let dataF;
 
+//https://api.nasa.gov/mars-photos/api/v1/manifests/perseverance?name&api_key=DEMO_KEY
+
 let resultBox = document.getElementById("newestImg");
 let expandButton = document.getElementById("expand");
 
@@ -40,18 +42,49 @@ loadButton.addEventListener('click', () => {
 }, false);
 
 function dataInput(sol) {
+    if(sol == "newest" || sol == "max" || sol == "new") {//get the newest Images from each rover
+        newestData(roverselect.value);
+        return;
+    }
     let solnumber = parseInt(sol);
     if (solnumber < 0 || !numbercheck.test(sol)) {
         console.log("[INFO]: Invalid Sol input");
         return;
     }
     if (solnumber == currentsol) {//reduce DataBase executeion (limit: 1000 / h)
+        console.log("sdlkjf!");
         return;
     }
     loadData(sol, roverselect.value);
 }
 
-loadData(1, "perseverance");
+/**
+ * get latest Value and then call loadData();
+ */
+function init() {
+    newestData("perseverance");
+}
+init();
+
+function newestData(rover) {
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${rover}?name&api_key=${NasaKey}`)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            inputsol.value = data.photo_manifest.max_sol;
+            loadData(data.photo_manifest.max_sol, rover);
+        })
+        .catch((error) => {
+            console.log('[ERROR]: ', error);
+        });
+}
+
+/**
+ * loads the Images from the Rover with the help of the input parameters
+ * @param {*} sol Martian day
+ * @param {*} rover Rover name
+ */
 function loadData(sol, rover) {
     let link = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${NasaKey}`
     fetch(link)
