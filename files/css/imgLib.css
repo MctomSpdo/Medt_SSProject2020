@@ -46,7 +46,6 @@
 #expand > img {
     height: 100%;
     width: auto;
-    transform: rotate(180deg);
 }
 
 #input {
@@ -71,6 +70,13 @@
     height: 5vh;
     border: 2px solid rgba(255, 255, 255, 0.4);
     background: rgba(0, 0, 0, 0);
+    transition: border-color 0.5s;
+}
+
+#inputbutton:hover {
+    border-color: #fff;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
 }
 
 #selectRover option {
@@ -113,9 +119,9 @@
 }
 
 #lib-fullscreen > div > div img {
-    height: 100%;
-    width: auto;
-    max-width: 90vw;
+    width: 100%;
+    height: auto;
+    max-width: 80vw;
 }
 
 #lib-fullscreen > div,
@@ -131,11 +137,25 @@
 #FullscreenimageWrapper {
     height: 90%;
     max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
     #newestImg {
         grid-template-columns: 50% 50%;
+    }
+
+    #newestImg > div:last-child {
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
     }
 }
 

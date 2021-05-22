@@ -12,8 +12,6 @@
 let NasaKey = "Ard5P1Gocb3XeAbaaquOzvp2W1eWPDMPYTAHqV5D";
 let dataF;
 
-//https://api.nasa.gov/mars-photos/api/v1/manifests/perseverance?name&api_key=DEMO_KEY
-
 let resultBox = document.getElementById("newestImg");
 let expandButton = document.getElementById("expand");
 
@@ -41,6 +39,11 @@ loadButton.addEventListener('click', () => {
     dataInput(inputsol.value);
 }, false);
 
+/**
+ * Preperatrion for the request based on the day, or if input = "max" | "new" | "newest" it loads the newest Images
+ * @param {*} sol sol to be requested
+ * @returns null if input is invalid;
+ */
 function dataInput(sol) {
     if(sol == "newest" || sol == "max" || sol == "new") {//get the newest Images from each rover
         newestData(roverselect.value);
@@ -51,8 +54,8 @@ function dataInput(sol) {
         console.log("[INFO]: Invalid Sol input");
         return;
     }
-    if (solnumber == currentsol) {//reduce DataBase executeion (limit: 1000 / h)
-        console.log("sdlkjf!");
+    if (solnumber == currentsol + roverselect.value) {//reduce DataBase executeion (limit: 1000 / h)
+        console.log("asdfasdf");
         return;
     }
     loadData(sol, roverselect.value);
@@ -66,6 +69,10 @@ function init() {
 }
 init();
 
+/**
+ * Get the newest Images of the provided Rover
+ * @param {String} rover Rover name
+ */
 function newestData(rover) {
     fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${rover}?name&api_key=${NasaKey}`)
         .then((response) => {
@@ -82,8 +89,8 @@ function newestData(rover) {
 
 /**
  * loads the Images from the Rover with the help of the input parameters
- * @param {*} sol Martian day
- * @param {*} rover Rover name
+ * @param {Number} sol Martian day
+ * @param {String} rover Rover name
  */
 function loadData(sol, rover) {
     let link = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${NasaKey}`
@@ -100,8 +107,13 @@ function loadData(sol, rover) {
         });
 }
 
+/**
+ * Generates the Image DOM from the JSON data
+ * @param {JSON} imgdata 
+ * @returns the html in plain text
+ */
 function generateImg(imgdata) {
-    let html = `<div>
+    return `<div>
             <img src="${imgdata.img_src}"
                 alt="Nasa Image" onclick="toFullScreen(this);">
             <div>
@@ -111,16 +123,24 @@ function generateImg(imgdata) {
                 <p>Earth Date: ${imgdata.earth_date}</p>
             </div>
         </div>`
-    return html;
 }
 
+/**
+ * Loads the Image into the fullscreen element
+ * @param {HTMLElement} element Image clicked on
+ */
 function toFullScreen(element) {
     fullscreenImage.src = element.src;
     fullscreenText.innerHTML = element.parentElement.children[1].innerHTML;
     fullscreenDisplay(true);
 }
 
+/**
+ * Generates the Image Library (DOM)
+ * @param {JSON} data API Response
+ */
 function generateLib(data) {
+    console.log(data);
     let box1 = "<div>";
     let box2 = "<div>";
     let box3 = "<div>";
@@ -148,22 +168,26 @@ function generateLib(data) {
     box3 += "</div>";
 
     resultBox.innerHTML = box1 + box2 + box3;
-    currentsol = data.photos[0].sol;
+    currentsol = data.photos[0].sol + "" + data.photos[0].rover.name;
 }
 
+/**
+ * Expands the Image gallery
+ */
 function expand() {
     if (expanded) {
         resultBox.style.maxHeight = "80vh";
-        expandButton.children[0].style.transform = "rotate(180deg)";
     } else {
         resultBox.style.maxHeight = "99999999999999vh";
-        expandButton.children[0].style.transform = "rotate(0deg)";
     }
     expanded = !expanded;
-    expandButton.children[0].style.transform = "";
-
+    expandButton.classList.toggle("rotate180");
 }
 
+/**
+ * Hides or displays the Full screen Image
+ * @param {Boolean} on true to display, false to hide
+ */
 function fullscreenDisplay(on) {
     if (!on) {
         fullscreenBox.style.display = "none";
