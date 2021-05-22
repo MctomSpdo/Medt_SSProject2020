@@ -55,7 +55,6 @@ function dataInput(sol) {
         return;
     }
     if (solnumber == currentsol + roverselect.value) {//reduce DataBase executeion (limit: 1000 / h)
-        console.log("asdfasdf");
         return;
     }
     loadData(sol, roverselect.value);
@@ -100,7 +99,6 @@ function loadData(sol, rover) {
         })
         .then((data) => {
             generateLib(data);
-            console.log(data);
         })
         .catch((error) => {
             console.log('[ERROR]: ', error);
@@ -140,7 +138,6 @@ function toFullScreen(element) {
  * @param {JSON} data API Response
  */
 function generateLib(data) {
-    console.log(data);
     let box1 = "<div>";
     let box2 = "<div>";
     let box3 = "<div>";
