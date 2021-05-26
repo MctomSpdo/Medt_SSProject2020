@@ -1,0 +1,32 @@
+.swiper-slide > div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.swiper-slide .content-imgbox {
+    width: 100%;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: #fff;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-container {
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.swiper-slide .content-imgbox img {
+    width: 80%;
+    height: auto;
+}
+
+.swiper-slide .content-imgbox > div > div {
+    width: 80%;
+    margin: 0 auto;
+}

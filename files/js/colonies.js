@@ -13,6 +13,7 @@
 const slide1 = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 100,
+    height: 100,
     //centeredSlides: true,
     navigation: {
         nextEl: ".swiper-button-next",

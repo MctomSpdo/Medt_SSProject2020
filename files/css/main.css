@@ -459,15 +459,6 @@ footer > div {
 /*https://www.w3schools.com/howto/howto_css_loader.asp 
   https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp*/
 
-
-.swiper-slide > div {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.swiper-slide .content-imgbox {
-    width: 100%;
-}
 /*********************************** RESPONSIVE *****************************************/
 
 @media (min-width: 600px) and (max-width: 800px) {
