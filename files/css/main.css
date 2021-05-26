@@ -306,7 +306,9 @@ nav {
 .content-imgbox {
     text-align: center;
     width: 60%;
-    margin: 3vh auto 1vh auto;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
 }
 
 .content-imgbox > div > img {
@@ -317,9 +319,9 @@ nav {
 .content-imgbox > div > div {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.65);
     width: 100%;
-    padding: 5% 0;
+    padding: 2% 0;
 }
 
 .content-imgbox > div > div > p {
@@ -457,6 +459,15 @@ footer > div {
 /*https://www.w3schools.com/howto/howto_css_loader.asp 
   https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp*/
 
+
+.swiper-slide > div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.swiper-slide .content-imgbox {
+    width: 100%;
+}
 /*********************************** RESPONSIVE *****************************************/
 
 @media (min-width: 600px) and (max-width: 800px) {

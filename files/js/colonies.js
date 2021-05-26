@@ -11,9 +11,13 @@
 
 //Side 1:
 const slide1 = new Swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 100,
     //centeredSlides: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
+
+swiper.slideNext();
