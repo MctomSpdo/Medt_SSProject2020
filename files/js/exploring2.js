@@ -45,7 +45,9 @@ loadButton.addEventListener('click', () => {
  * @returns null if input is invalid;
  */
 function dataInput(sol) {
-    if(sol == "newest" || sol == "max" || sol == "new") {//get the newest Images from each rover
+    let newinputs = ["newest", "max", "new"]
+    let checksol = sol.toLowerCase();
+    if(newinputs.includes(checksol)) {//get the newest Images from each rover
         newestData(roverselect.value);
         return;
     }

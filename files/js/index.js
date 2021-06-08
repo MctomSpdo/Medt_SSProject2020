@@ -41,7 +41,7 @@ function parsePersWeather(data) {
                 <hr>
                 <p>High: ${convert(current.max_temp)}</p>
                 <p>Low: ${convert(current.min_temp)}</p>
-                <p>Pressure: ${current.pressure} psi</p>
+                <p>Pressure: ${current.pressure} Pa</p>
             </div>`
     }
     weatherReport.innerHTML = html;
