@@ -16,6 +16,8 @@ let nameError = document.getElementById('nameError');
 let emailError = document.getElementById('emailError');
 let userNameError = document.getElementById('userNameError');
 
+let box = document.getElementById("box");
+
 
 function checkNameInput() {
     let name = nameInput.value;
@@ -63,10 +65,28 @@ userNameInput.addEventListener("keyup", checkUserName);
 
 function sendInput() {
     if (checkEmailInput() && checkNameInput() && checkUserName()) {
-        alert("This page is currently in Development!");
+        signUp();
     }
 }
+
+document.getElementById("sendButton").addEventListener('click', () => {
+    sendInput();
+    event.preventDefault();
+});
+
+function signUp() {
+    let userc = new User(userNameInput.value, nameInput.value, emailInput.value);
+    box.innerHTML = `<h1>Congrats!</h1><p>You signed up sucesssfully for the Newletter!</p><p>It will be sent to ${userc.email}.`
+    console.log(userc);
+}
 class User {
+    username;
     name;
     email;
+
+    constructor(username, name, email) {
+        this.username = username;
+        this.name = name;
+        this.email = email;
+    }
 }

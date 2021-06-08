@@ -28,46 +28,53 @@
                 <div class="nav-button-line"></div>
             </div>
         </div>
-        <div id="nav-menu">
-            <div id="nav-button-close" onclick="unDisplayMenu();">
-                <img src="../img/close.svg" alt="close icon" />
+    </nav>
+    <div id="nav-menu">
+        <div id="nav-button-close" onclick="unDisplayMenu();">
+            <img src="../img/close.svg" alt="close icon" />
+        </div>
+        <div id="nav-links">
+            <div>
+                <a href="../../index.html">Home</a>
+                <div>
+                    <h3>Home</h3>
+                    <p>The start page of the Project</p>
+                </div>
             </div>
-            <div id="nav-links">
+            <div>
+                <a href="colonies.html">Colonies</a>
                 <div>
-                    <a href="../../index.html">Home</a>
-                    <div>
-                        <h3>Home</h3>
-                        <p>The start page of the Project</p>
-                    </div>
+                    <h3>Colonies</h3>
+                    <p>How we're are gonna colonize Mars</p>
                 </div>
+            </div>
+            <div>
+                <a href="exploring.html">Exploring Mars</a>
                 <div>
-                    <a href="colonies.html">Colonies</a>
-                    <div>
-                        <h3>Colonies</h3>
-                        <p>How we're are gonna colonize Mars</p>
-                    </div>
+                    <h3>Exploring Mars</h3>
+                    <p>Humantiy is currently exploring our neighbour planet. But what next?</p>
                 </div>
+            </div>
+            <div>
+                <a id="active">Newsletter</a>
                 <div>
-                    <a id="active">Newsletter</a>
-                    <div>
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our Newsletter about Mars</p>
-                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our Newsletter about Mars</p>
                 </div>
+            </div>
+            <div>
+                <a href="about.html">About</a>
                 <div>
-                    <a href="./about.html">About</a>
-                    <div>
-                        <h3>About</h3>
-                        <p>About this project and the developer</p>
-                    </div>
+                    <h3>About</h3>
+                    <p>About this project and the developer</p>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <main>
         <div class="perfect-center fullvh">
-            <div>
+            <div id="box">
                 <h1 id="gameHeader">Newsletter</h1>
                 <div class="perfect-center">
                     <form id="gameInput" autocomplete="off">
@@ -81,7 +88,7 @@
                         <p id="emailError" class="error"></p>
                         <br>
                         <div class="perfect-center">
-                            <button onclick="sendInput();">Send</button>
+                            <button id="sendButton">Send</button>
                         </div>
                     </form>
                 </div>

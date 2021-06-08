@@ -1,6 +1,6 @@
 /**************************************************************************************************
  * MEDT - SSProject 2020
- * Author: Martin Huemer, Thomas Spindler
+ * Author: Thomas Spindler
  * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
  * HTL Leonding -> 2 BHTIM
  * 
@@ -11,14 +11,10 @@
 
 //Side 1:
 const slide1 = new Swiper('.swiper-container', {
-    speed: 400,
-    spaceBetween: 100,
-    height: 100,
-    //centeredSlides: true,
+    speed: 300,
+    calculateHeight: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
-
-swiper.slideNext();

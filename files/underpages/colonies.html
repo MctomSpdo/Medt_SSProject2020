@@ -34,42 +34,49 @@
                 <div class="nav-button-line"></div>
             </div>
         </div>
-        <div id="nav-menu">
-            <div id="nav-button-close" onclick="unDisplayMenu();">
-                <img src="../img/close.svg" alt="close icon" />
+    </nav>
+    <div id="nav-menu">
+        <div id="nav-button-close" onclick="unDisplayMenu();">
+            <img src="../img/close.svg" alt="close icon" />
+        </div>
+        <div id="nav-links">
+            <div>
+                <a href="../../index.html">Home</a>
+                <div>
+                    <h3>Home</h3>
+                    <p>The start page of the Project</p>
+                </div>
             </div>
-            <div id="nav-links">
+            <div>
+                <a id="active">Colonies</a>
                 <div>
-                    <a href="../../index.html">Home</a>
-                    <div>
-                        <h3>Home</h3>
-                        <p>The start page of the Project</p>
-                    </div>
+                    <h3>Colonies</h3>
+                    <p>How we're are gonna colonize Mars</p>
                 </div>
+            </div>
+            <div>
+                <a href="exploring.html">Exploring Mars</a>
                 <div>
-                    <a id="active">Colonies</a>
-                    <div>
-                        <h3>Colonies</h3>
-                        <p>How we're are gonna colonize Mars</p>
-                    </div>
+                    <h3>Exploring Mars</h3>
+                    <p>Humantiy is currently exploring our neighbour planet. But what next?</p>
                 </div>
+            </div>
+            <div>
+                <a href="newsletter.html">Newsletter</a>
                 <div>
-                    <a href="./newsletter.html">Newsletter</a>
-                    <div>
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our Newsletter about Mars</p>
-                    </div>
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our Newsletter about Mars</p>
                 </div>
+            </div>
+            <div>
+                <a href="about.html">About</a>
                 <div>
-                    <a href="./about.html">About</a>
-                    <div>
-                        <h3>About</h3>
-                        <p>About this project and the developer</p>
-                    </div>
+                    <h3>About</h3>
+                    <p>About this project and the developer</p>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <main>
         <div class="page-header">
@@ -83,17 +90,41 @@
         <div class="spaceholder5vh"></div>
         <div class="content">
             <h1>How are we gonna colonize Mars?</h1>
-            <p>This is a good qeuestion, and the answer to it is complicated.</p>
-            <p>Currently, a lot of private companies and government Organisations like NASA, ESA, and some others are
-                interested in colonozing our neightbour planet.</p>
-            <p>There are a lot of currently active science projects that help us understand living on the Mars better.
-                There are also a couple of projects that help us understand how to live in Space with no gravity. </p>
+            <div class="grid-40-60">
+                <div class="perfect-center phoneBottom">
+                    <div class="imgbox">
+                        <img sizes="(max-width: 1423px) 100vw, 1423px" srcset="
+                            ../img/colonizing1/01.jpg 100w,
+                            ../img/colonizing1/02.jpg 636w,
+                            ../img/colonizing1/03.jpg 943w,
+                            ../img/colonizing1/04.jpg 1207w,
+                            ../img/colonizing1/05.jpg 1423w" src="../img/colonizing1/05.jpg" alt="mars colonie">
+                    </div>
+                </div>
+                <div class="perfect-center">
+                    <div class="text-box">
+                        <p>This is a good question, and the answer to it is complicated.</p>
+                        <p>Currently, a lot of private companies and government Organisations like NASA, ESA, and some
+                            others are
+                            interested in colonizing our neighbor planet.</p>
+                        <p>There are a lot of currently active science projects that help us understand living on the
+                            Mars better.
+                            There are also a couple of projects that help us understand how to live in Space with no
+                            gravity. </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="spaceholder5vh"></div>
-        <div class="content">
-            <h1>Projects</h1>
-            <p>Listed here are a couple of project that help us explore he living away from Earth: </p>
+        <div>
+            <div class="perfect-center content">
+                <div>
+                    <h1>Projects</h1>
+                    <h3>Listed here are a couple of project that help us explore the living away from Earth: </h3>
+                </div>
+            </div>
             <!-- Slider main container (https://swiperjs.com/swiper-api)-->
             <div class="swiper-container">
                 <!-- Additional required wrapper -->
@@ -101,10 +132,41 @@
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <div>
+                            <h1>Satellites</h1>
+                            <p>Satellites help us photograph, and use scientific instruments to gather data from Space.
+                                They are often used to discover unknown areas of space, and help to understand the
+                                universe. But they are also really important for colonizing mars</p>
+                            <p>The are used to gather Data from the planet, but also have a important role in sending
+                                data to earth, since sending it over a satellite does not require as much Energy and
+                                sending it from the surface of mars. When Humans will land on mars, one important thing
+                                is that they have a stable and fast connection back to earth. Since even people living
+                                on mars are going to go on the internet, or send valuable research data to ground.</p>
+                        </div>
+                        <div class="content-imgbox">
+                            <div class="image-text-wrapper">
+                                <img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+                                ../img/satelite1/satelite1_0.jpg 200w,
+                                ../img/satelite1/satelite1_1.jpg 610w,
+                                ../img/satelite1/satelite1_2.jpg 864w,
+                                ../img/satelite1/satelite1_3.jpg 1088w,
+                                ../img/satelite1/satelite1_4.jpg 1285w,
+                                ../img/satelite1/satelite1_5.jpg 1400w" src="../img/satelite1/satelite1_5.jpg"
+                                    alt="Satelite">
+                                <div>Satelite in Space</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div>
                             <h1>ISS</h1>
                             <p>The International Space Station (ISS), helps us to do sience in no gravity, and got us a
-                                lot of expierence from building structurs, that are filled with air in Space. It also
-                                helps us to see the impact of the different enviroment on humans. </p>
+                                lot of experience from building structures, that are filled with air in Space. It also
+                                helps us to see the impact of the different enviroment on humans.</p>
+                            <p>On the ISS, we grow plants successfully for multiple years now. Also there are a lot of
+                                experiments running, that help us survive in space, without the help of earth. This is
+                                just starting currently, but we have learned a lot of new things due to the ISS. </p>
                             <div class="content-imgbox">
                                 <div>
                                     <img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
@@ -115,30 +177,32 @@
                                 ../img/iss/ISS_4.jpg 1262w,
                                 ../img/iss/ISS_5.jpg 1332w,
                                 ../img/iss/ISS_6.jpg 1400w" src="../img/iss/ISS_6.jpg" alt="Iss">
-                                    <div>
-                                        <p>Image of the current ISS</p>
-                                    </div>
+                                    <div>Image of the current ISS</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-slide">
                         <div>
                             <h1>Mars Rovers</h1>
                             <p>The Mars rovers help us understand the Mars better and better. They provide important
                                 data from the surface that helps us build fixed stations on Mars.</p>
+                            <p><a href="exploring.html">Read More</a></p>
                             <div class="content-imgbox">
-                                <div>
-                                    <img src="../img/rover1/Image.jpg" alt="Perserverance Rover during landing">
-                                    <div>
-                                        <p>Perserverance during its landing on 18th of February 2021</p>
-                                    </div>
+                                <div class="image-text-wrapper">
+                                    <img sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+                                        ../img/rover1/00.jpg 200w,
+                                        ../img/rover1/01.jpg 484w,
+                                        ../img/rover1/02.jpg 681w,
+                                        ../img/rover1/03.jpg 854w,
+                                        ../img/rover1/04.jpg 1019w,
+                                        ../img/rover1/05.jpg 1200w" src="../img/rover1/05.jpg"
+                                        alt="Perserverance Rover during landing">
+                                    <div>Perserverance during its landing on 18th of February 2021</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-
                     </div>
                 </div>
                 <!-- If we need pagination -->
@@ -150,21 +214,38 @@
             </div>
         </div>
 
+        <div style="height:5vh"></div>
         <div class="spaceholder5vh"></div>
 
         <div class="content">
             <h1>When are we gonna do it?</h1>
-            <p>We first need to find solutions to a lot of problems that are gonna be caused by the Planet, and we have
-                to built a base there, since humans can't survive without an atmosphere.</p>
+            <div class="grid-60-40">
+                <div class="perfect-center">
+                    <div class="text-box">
+                        <p>We first need to find solutions to a lot of problems that are gonna be caused by the Planet,
+                            and we have
+                            to built a base there, since humans can't survive without an atmosphere.</p>
+                        <p>But there are a lot of technologies that are in development or already developed, that will
+                            help us with it.</p>
+                        <p>One of the best examples is the Starship from <a href="https://www.spacex.com/">SpaceX</a>.
+                        </p>
+                        <p>Its just gonna be a matter of time until humans will life on Mars</p>
+                    </div>
+                </div>
+                <div class="perfect-center">
+                    <div class="imgbox">
+                        <img sizes="(max-width: 1500px) 100vw, 1500px" srcset="
+                            ../img/starship/0.jpg 200w,
+                            ../img/starship/1.jpg 710w,
+                            ../img/starship/2.jpg 1017w,
+                            ../img/starship/3.jpg 1282w,
+                            ../img/starship/4.jpg 1500w" src="../img/starship/4.jpg" alt="Starship">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="spaceholder5vh"></div>
-
-        <div class="content">
-            <h1>Dev</h1>
-            <p>Due to this Page still being in Development, this content ends here. Please come back later for more
-                content</p>
-        </div>
     </main>
 
     <footer>
@@ -176,7 +257,6 @@
                 <h2>Information</h2>
                 <p>Medientechnik Sommersemeterprojekt 2021</p>
                 <p><a href="./about.html">About</a></p>
-                <p><a href="./sources.html">Sources</a></p>
             </div>
             <div>
                 <h2>Creator</h2>
