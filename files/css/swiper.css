@@ -1,3 +1,10 @@
+/***************************************************
+    MARS - 2020
+    file: swiper.css
+    CSS for the Swiper library (https://swiperjs.com/)
+    Author: MctomSpdo
+****************************************************/
+
 .swiper-slide > div {
     width: 90%;
     margin: 0 auto;

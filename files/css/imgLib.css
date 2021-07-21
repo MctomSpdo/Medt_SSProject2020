@@ -1,3 +1,10 @@
+/*********************************************
+    MARS - 2020
+    file: imgLib.css
+    CSS for the custom coded image libary
+    Author: MctomSpdo
+*********************************************/
+
 #newestImg {
     display: grid;
     grid-template-columns: 33% 33% 33%;

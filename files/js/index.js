@@ -1,8 +1,7 @@
 /**************************************************************************************************
- * MEDT - SSProject 2020
- * Author: Thomas Spindler
- * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
- * HTL Leonding -> 2 BHTIM
+ * MARS 2020
+ * Author: Mctom Spdo
+ * Project: MARS 2020
  * 
  * Page: Index.html
  * Descripton: The Main JS Used on every page of the Project

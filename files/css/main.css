@@ -1,3 +1,10 @@
+/***************************************************
+    MARS - 2020
+    file: Main.css
+    Main Css for the entire webpage
+    Author: MctomSpdo
+****************************************************/
+
 /*************************** COLOR PALLETE *******************************************/
 
 :root {
@@ -7,7 +14,6 @@
     --textColor: #fff;
     --navBackground: #fff;
 }
-/* https://www.w3schools.com/css/css3_variables.asp */
 
 html,
 body {
@@ -32,7 +38,6 @@ p {
 }
 
 .noscroll {
-    /* Dissallows Scrolling on the body Element */
     overflow: hidden;
 }
 
@@ -456,8 +461,6 @@ footer > div {
         transform: rotate(360deg);
     }
 }
-/*https://www.w3schools.com/howto/howto_css_loader.asp 
-  https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp*/
 
 /*********************************** RESPONSIVE *****************************************/
 

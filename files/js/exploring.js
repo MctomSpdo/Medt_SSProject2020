@@ -1,8 +1,7 @@
 /**************************************************************************************************
- * MEDT - SSProject 2020
- * Author: Martin Huemer, Thomas Spindler
- * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
- * HTL Leonding -> 2 BHTIM
+ * MARS 2020
+ * Author: Mctom Spdo, M. H.
+ * Project: MARS 2020
  * 
  * Page: Exploring Mars
  * Descripton: This Js loads and embeds the 3D Models of the Satelite and the Mars Rovers.

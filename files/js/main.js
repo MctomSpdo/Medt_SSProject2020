@@ -1,8 +1,7 @@
 /**************************************************************************************************
- * MEDT - SSProject 2020
- * Author: Martin Huemer, Thomas Spindler
- * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
- * HTL Leonding -> 2 BHTIM
+ * MARS 2020
+ * Author: M.H., Mctom Spdo
+ * Project: MARS 2020
  * 
  * Page: *
  * Descripton: The Main JS Used on every page of the Project
@@ -49,7 +48,6 @@ function initMenu() {
     }
 }
 initMenu();
-//https://wiki.selfhtml.org/wiki/JavaScript/DOM/Event/mouseover
 
 /*
  * TOP BUTTON 
@@ -64,4 +62,3 @@ window.onscroll = () => {
         topButton.style.display = "none";
     }
 }
-//https://www.w3schools.com/howto/howto_css_modal_images.asp

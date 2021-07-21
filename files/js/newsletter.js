@@ -1,8 +1,7 @@
 /**************************************************************************************************
- * MEDT - SSProject 2020
- * Author: Martin Huemer, Thomas Spindler
- * Project: Medientechnik Sommersemesterprojekt 2020 (Mars)
- * HTL Leonding -> 2 BHTIM
+ * MARS 2020
+ * Author: M.H, Mctom Spdo
+ * Project: MARS 2020
  * 
  * Page: Newsletter
  * Descripton: This is the Newsletter sign up JS.
